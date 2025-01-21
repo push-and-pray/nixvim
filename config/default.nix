@@ -6,6 +6,7 @@
     ./telescope.nix
     ./extraplugins.nix
     ./languages
+    ./lazyload.nix
   ];
 
   colorschemes.gruvbox.enable = true;
