@@ -8,6 +8,8 @@
     ./languages
   ];
 
+  colorschemes.gruvbox.enable = true;
+
   performance.byteCompileLua = {
     enable = true;
     initLua = false;
