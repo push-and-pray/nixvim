@@ -19,9 +19,6 @@
     nvimRuntime = true;
   };
   globals.mapleader = " ";
-  clipboard = {
-    register = "unnamedplus";
-  };
   opts = {
     number = true;
     relativenumber = true;
