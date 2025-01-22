@@ -56,6 +56,11 @@
   };
 
   plugins = {
+    snacks = {
+      settings = {
+        quickfile.enable = true;
+      };
+    };
     render-markdown.enable = true;
     marks = {
       enable = true;
