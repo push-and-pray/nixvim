@@ -10,6 +10,7 @@
   ];
 
   colorschemes.gruvbox.enable = true;
+  extraPython3Packages = p: with p; [pylatexenc];
 
   performance.byteCompileLua = {
     enable = true;
