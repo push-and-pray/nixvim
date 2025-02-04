@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   imports = [
     ./cmp.nix
     ./git.nix
@@ -10,7 +10,7 @@
   ];
 
   colorschemes.gruvbox.enable = true;
-  extraPython3Packages = p: with p; [pylatexenc];
+  extraPackages = with pkgs; [python312Packages.pylatexenc];
 
   performance.byteCompileLua = {
     enable = true;
