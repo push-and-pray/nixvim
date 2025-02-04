@@ -10,7 +10,6 @@
   ];
 
   colorschemes.gruvbox.enable = true;
-  extraPackages = with pkgs; [python312Packages.pylatexenc];
 
   performance.byteCompileLua = {
     enable = true;
@@ -62,7 +61,13 @@
         quickfile.enable = true;
       };
     };
-    render-markdown.enable = true;
+    markview = {
+      enable = true;
+      settings = {
+        hybrid_modes = ["i"];
+        modes = ["i" "n" "no" "c"];
+      };
+    };
     marks = {
       enable = true;
       mappings = {
