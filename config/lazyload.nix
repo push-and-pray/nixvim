@@ -28,7 +28,7 @@
     render-markdown = {
       lazyLoad = {
         settings = {
-          ft = "md";
+          ft = "markdown";
         };
       };
     };
