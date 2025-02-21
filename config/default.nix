@@ -68,11 +68,13 @@
         modes = ["i" "n" "no" "c"];
       };
     };
-    marks = {
+    harpoon = {
       enable = true;
-      mappings = {
-        "previous" = "<leader>,";
-        "next" = "<leader>.";
+      keymaps = {
+        toggleQuickMenu = "<leader>e";
+        addFile = "<leader>a";
+        navNext = "<leader>.";
+        navPrev = "<leader>,";
       };
     };
     toggleterm = {
