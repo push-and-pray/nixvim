@@ -64,8 +64,10 @@
     markview = {
       enable = true;
       settings = {
-        hybrid_modes = ["i" "n" "no" "c"];
-        modes = ["i" "n" "no" "c"];
+        preview = {
+          hybrid_modes = ["i" "r"];
+          modes = ["n" "x"];
+        };
       };
     };
     harpoon = {
