@@ -114,13 +114,18 @@
     }
     {
       mode = "n";
+      key = "<C-e>";
+      action.__raw = "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end";
+    }
+    {
+      mode = "n";
       key = "<leader>.";
-      action.__raw = "function() harpoon:list():next() end";
+      action.__raw = "function() require'harpoon':list():next() end";
     }
     {
       mode = "n";
       key = "<leader>,";
-      action.__raw = "function() harpoon:list():prev() end";
+      action.__raw = "function() require'harpoon':list():prev() end";
     }
   ];
 }
