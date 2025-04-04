@@ -11,13 +11,6 @@
 
   colorschemes.gruvbox.enable = true;
 
-  performance.byteCompileLua = {
-    enable = true;
-    initLua = false;
-    configs = true;
-    plugins = true;
-    nvimRuntime = true;
-  };
   globals.mapleader = " ";
   opts = {
     number = true;
@@ -72,12 +65,6 @@
     };
     harpoon = {
       enable = true;
-      keymaps = {
-        toggleQuickMenu = "<leader>e";
-        addFile = "<leader>a";
-        navNext = "<leader>.";
-        navPrev = "<leader>,";
-      };
     };
     toggleterm = {
       enable = true;
@@ -119,6 +106,21 @@
       action = "<cmd>lua MiniFiles.open()<CR>";
       key = "<leader><leader>";
       options.desc = "Files";
+    }
+    {
+      mode = "n";
+      key = "<leader>a";
+      action.__raw = "function() require'harpoon':list():add() end";
+    }
+    {
+      mode = "n";
+      key = "<leader>.";
+      action.__raw = "function() harpoon:list():next() end";
+    }
+    {
+      mode = "n";
+      key = "<leader>,";
+      action.__raw = "function() harpoon:list():prev() end";
     }
   ];
 }
