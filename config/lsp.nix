@@ -58,7 +58,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>e";
+      key = "<leader>ee";
       action.__raw = ''
         function()
           vim.diagnostic.open_float()
@@ -68,17 +68,7 @@
     }
     {
       mode = "n";
-      key = "<leader>de";
-      action.__raw = ''
-        function()
-          vim.diagnostic.open_float()
-        end
-      '';
-      options.desc = "Show diagnostics";
-    }
-    {
-      mode = "n";
-      key = "<leader>d.";
+      key = "<leader>e.";
       action.__raw = ''
         function()
           vim.diagnostic.goto_next()
@@ -88,7 +78,7 @@
     }
     {
       mode = "n";
-      key = "<leader>d,";
+      key = "<leader>e,";
       action.__raw = ''
         function()
           vim.diagnostic.open_float()
