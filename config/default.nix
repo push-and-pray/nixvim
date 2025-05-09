@@ -7,6 +7,7 @@
     ./extraplugins.nix
     ./languages
     ./lazyload.nix
+    ./dap.nix
   ];
 
   colorschemes.gruvbox.enable = true;
@@ -49,11 +50,6 @@
   };
 
   plugins = {
-    snacks = {
-      settings = {
-        quickfile.enable = true;
-      };
-    };
     markview = {
       enable = true;
       settings = {
