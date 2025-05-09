@@ -5,7 +5,7 @@
 
       settings = {
         autoEnableSources = true;
-        perfomance = {
+        performance = {
           debounce = 150;
         };
 
