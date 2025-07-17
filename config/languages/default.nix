@@ -6,5 +6,6 @@
     ./nix.nix
     ./k8s.nix
     ./zig.nix
+    ./go.nix
   ];
 }
