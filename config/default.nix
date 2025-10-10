@@ -28,7 +28,7 @@
     breakindent = true;
 
     ignorecase = true;
-    smartcase = true; # Don't ignore case with capitals
+    smartcase = true; 
 
     completeopt = [
       "menuone"
@@ -50,15 +50,6 @@
   };
 
   plugins = {
-    markview = {
-      enable = true;
-      settings = {
-        preview = {
-          hybrid_modes = ["i" "r"];
-          modes = ["n" "x"];
-        };
-      };
-    };
     harpoon = {
       enable = true;
     };
