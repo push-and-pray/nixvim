@@ -4,6 +4,7 @@
       enable = true;
       printUrl = false;
     };
+
     gitsigns = {
       enable = true;
       settings = {
@@ -11,7 +12,13 @@
       };
     };
 
-    lazygit.enable = true;
+    lazygit = {
+      enable = true;
+      lazyLoad = {
+        cmd = "LazyGit";
+        keys = ["<leader>gg"];
+      };
+    };
   };
   keymaps = [
     {

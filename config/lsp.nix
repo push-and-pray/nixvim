@@ -3,30 +3,7 @@
     lsp = {
       enable = true;
       inlayHints = true;
-      servers = {
-        gopls.enable = true;
-      };
     };
-
-    luasnip = {
-      enable = true;
-      settings = {
-        enable_autosnippets = true;
-        store_selection_keys = "<Tab>";
-      };
-      fromVscode = [
-        {
-          lazyLoad = true;
-          paths = "${pkgs.vimPlugins.friendly-snippets}";
-        }
-      ];
-      lazyLoad = {
-        settings = {
-          event = "InsertEnter";
-        };
-      };
-    };
-    lz-n.enable = true;
 
     none-ls = {
       enable = true;
@@ -41,7 +18,6 @@
         };
         formatting = {
           prettier.enable = true;
-          gofmt.enable = true;
         };
       };
     };

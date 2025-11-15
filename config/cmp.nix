@@ -16,6 +16,7 @@
           ];
         };
         snippets.preset = "luasnip";
+        signature.enabled = true;
         sources = {
           default = [
             "lsp"
@@ -44,6 +45,11 @@
           paths = "${pkgs.vimPlugins.friendly-snippets}";
         }
       ];
+      lazyLoad = {
+        settings = {
+          event = "InsertEnter";
+        };
+      };
     };
 
     lspkind = {

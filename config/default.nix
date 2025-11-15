@@ -50,6 +50,7 @@
   };
 
   plugins = {
+    lz-n.enable = true;
     harpoon = {
       enable = true;
     };
@@ -68,7 +69,6 @@
         };
       };
     };
-    lz-n.enable = true;
 
     lightline.enable = true;
 
