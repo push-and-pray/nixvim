@@ -72,6 +72,7 @@
 
     lightline.enable = true;
 
+    treesitter-textobjects.enable = true;
     treesitter = {
       enable = true;
       settings = {
