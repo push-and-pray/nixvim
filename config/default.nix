@@ -16,6 +16,7 @@
   opts = {
     number = true;
     relativenumber = true;
+    wrap = false;
 
     tabstop = 2;
     softtabstop = 2;
@@ -28,7 +29,7 @@
     breakindent = true;
 
     ignorecase = true;
-    smartcase = true; 
+    smartcase = true;
 
     completeopt = [
       "menuone"
