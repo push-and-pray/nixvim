@@ -20,7 +20,13 @@
           paths = "${pkgs.vimPlugins.friendly-snippets}";
         }
       ];
+      lazyLoad = {
+        settings = {
+          event = "InsertEnter";
+        };
+      };
     };
+    lz-n.enable = true;
 
     none-ls = {
       enable = true;

@@ -6,7 +6,6 @@
     ./telescope.nix
     ./extraplugins.nix
     ./languages
-    ./lazyload.nix
     ./dap.nix
   ];
 
@@ -54,12 +53,23 @@
     harpoon = {
       enable = true;
     };
+
     toggleterm = {
       enable = true;
       settings = {
         open_mapping = "[[<C-t>]]";
       };
+      lazyLoad = {
+        settings = {
+          cmd = "ToggleTerm";
+          keys = [
+            "<C-t>"
+          ];
+        };
+      };
     };
+    lz-n.enable = true;
+
     lightline.enable = true;
 
     treesitter = {

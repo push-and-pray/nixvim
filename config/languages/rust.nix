@@ -20,6 +20,15 @@
         };
       };
     };
-    crates.enable = true;
+    crates = {
+      enable = true;
+      lazyLoad = {
+        settings = {
+          ft = "toml";
+        };
+      };
+    };
+
+    lz-n.enable = true;
   };
 }
