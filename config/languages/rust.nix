@@ -29,6 +29,5 @@
       };
     };
 
-    lz-n.enable = true;
   };
 }

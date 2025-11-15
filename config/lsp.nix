@@ -5,26 +5,20 @@
       inlayHints = true;
     };
 
-    none-ls = {
-      enable = true;
-      enableLspFormat = true;
+    lint.enable = true;
 
-      sources = {
-        code_actions = {
-          gitrebase.enable = true;
-          gitsigns.enable = true;
-        };
-        diagnostics = {
-        };
-        formatting = {
-          prettier.enable = true;
-        };
+    conform-nvim = {
+      enable = true;
+      settings.format_on_save = {
+        lspFallback = true;
+        timeoutMs = 500;
       };
     };
 
-    fidget.enable = true;
-
-    lsp-format.enable = true;
+    fidget = {
+      enable = true;
+      lazyLoad.settings.event = "LspAttach";
+    };
 
     which-key = {
       settings.spec = [

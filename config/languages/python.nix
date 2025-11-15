@@ -1,4 +1,5 @@
-{...}: {
+{pkgs, ...}: {
+  extraPackages = with pkgs; [isort ruff];
   plugins = {
     lsp = {
       enable = true;
@@ -6,14 +7,15 @@
         pyright.enable = true;
       };
     };
-    none-ls = {
-      enable = true;
-      sources = {
-        formatting = {
-          black.enable = true;
-          isort.enable = true;
-        };
+
+    conform-nvim = {
+      settings.formatters_by_ft = {
+        python = ["isort"];
       };
+    };
+
+    lint.lintersByFt = {
+      python = ["ruff"];
     };
   };
 }

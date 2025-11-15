@@ -1,4 +1,8 @@
-{...}: {
+{pkgs, ...}: {
+  extraPackages = with pkgs; [
+    statix
+    alejandra
+  ];
   plugins = {
     lsp = {
       enable = true;
@@ -6,19 +10,15 @@
         nil_ls.enable = true;
       };
     };
-    none-ls = {
-      enable = true;
-      sources = {
-        code_actions = {
-          statix.enable = true;
-        };
-        diagnostics = {
-          statix.enable = true;
-        };
-        formatting = {
-          alejandra.enable = true;
-        };
+
+    conform-nvim = {
+      settings.formatters_by_ft = {
+        nix = ["alejandra"];
       };
+    };
+
+    lint.lintersByFt = {
+      nix = ["statix"];
     };
   };
 }

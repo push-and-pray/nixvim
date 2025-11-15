@@ -12,13 +12,7 @@
       };
     };
 
-    lazygit = {
-      enable = true;
-      lazyLoad = {
-        cmd = "LazyGit";
-        keys = ["<leader>gg"];
-      };
-    };
+    lazygit.enable = true;
   };
   keymaps = [
     {

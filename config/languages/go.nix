@@ -1,4 +1,4 @@
-{_, ...}: {
+{pkgs, ...}: {
   plugins = {
     dap-go.enable = true;
     lsp = {
@@ -13,12 +13,10 @@
         go.enable = true;
       };
     };
-    none-ls = {
-      enable = true;
-      sources = {
-        formatting = {
-          gofmt.enable = true;
-        };
+
+    conform-nvim = {
+      settings.formatters_by_ft = {
+        go = ["gofmt"];
       };
     };
   };
