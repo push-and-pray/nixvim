@@ -6,7 +6,7 @@
     local metals = require("metals")
     local config = metals.bare_config()
     config.init_options.statusBarProvider = "off"
-    config.capabilities = require("cmp_nvim_lsp").default_capabilities()
+    config.capabilities = require("blink-cmp").get_lsp_capabilities(vim.lsp.protocol.make_client_capabilities())
     config.on_attach = function(client, bufnr)
         require("metals").setup_dap()
     end

@@ -1,34 +1,49 @@
-{...}: {
+{pkgs, ...}: {
   plugins = {
-    cmp = {
+    blink-cmp = {
       enable = true;
-
       settings = {
-        autoEnableSources = true;
-        performance = {
-          debounce = 150;
+        keymap = {
+          preset = "enter";
+          "<Tab>" = [
+            "select_next"
+            "fallback"
+          ];
+          "<S-Tab>" = [
+            "select_prev"
+            "accept"
+            "fallback"
+          ];
         };
-
-        mapping = {
-          "<C-Space>" = "cmp.mapping.complete()";
-          "<C-e>" = "cmp.mapping.close()";
-          "<CR>" = "cmp.mapping.confirm({ select = true })";
-          "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
-          "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-          "<C-d>" = "cmp.mapping.scroll_docs(4)";
-          "<C-f>" = "cmp.mapping.scroll_docs(-4)";
+        snippets.preset = "luasnip";
+        sources = {
+          default = [
+            "lsp"
+            "path"
+            "snippets"
+            "buffer"
+          ];
+          providers = {
+            buffer = {
+              score_offset = -7;
+            };
+          };
         };
-
-        sources = [
-          {name = "nvim_lsp";}
-          {name = "luasnip";}
-          {name = "path";}
-          {
-            name = "buffer";
-            keywordLength = 3;
-          }
-        ];
       };
+    };
+
+    luasnip = {
+      enable = true;
+      settings = {
+        enable_autosnippets = true;
+        store_selection_keys = "<Tab>";
+      };
+      fromVscode = [
+        {
+          lazyLoad = true;
+          paths = "${pkgs.vimPlugins.friendly-snippets}";
+        }
+      ];
     };
 
     lspkind = {
