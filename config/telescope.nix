@@ -1,24 +1,40 @@
-{...}: {
+{pkgs, ...}: {
+  extraPackages = with pkgs; [
+    ripgrep
+    xdg-utils
+  ];
+  extraConfigLua = ''
+    vim.g.loaded_netrw = 1
+    vim.g.loaded_netrwPlugin = 1
+  '';
   plugins.telescope = {
     enable = true;
-    settings = {
-      defaults = {
-        layout_config = {
-          horizontal = {
-            prompt_position = "top";
-          };
+    extensions = {
+      file-browser = {
+        enable = true;
+        settings = {
+          hijack_netrw = true;
+          auto_depth = true;
         };
-        sorting_strategy = "ascending";
       };
+      ui-select.enable = true;
+      fzf-native.enable = true;
     };
+
     keymaps = {
-      "<leader>/" = {
-        action = "live_grep";
+      "<leader><leader>" = {
+        action = "file_browser";
         options = {
-          desc = "Grep";
+          desc = "Find Files";
         };
       };
-      "<leader>:" = {
+      "<leader>ff" = {
+        action = "file_browser";
+        options = {
+          desc = "File Browser";
+        };
+      };
+      "<leader>f:" = {
         action = "command_history";
         options = {
           desc = "Command History";
@@ -28,18 +44,6 @@
         action = "live_grep";
         options = {
           desc = "Grep";
-        };
-      };
-      "<leader>fo" = {
-        action = "oldfiles";
-        options = {
-          desc = "Recent";
-        };
-      };
-      "<leader>fb" = {
-        action = "buffers";
-        options = {
-          desc = "Buffers";
         };
       };
       "<leader>fg" = {
