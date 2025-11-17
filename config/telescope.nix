@@ -13,7 +13,6 @@
       file-browser = {
         enable = true;
         settings = {
-          hijack_netrw = true;
           auto_depth = true;
         };
       };
@@ -26,12 +25,6 @@
         action = "file_browser";
         options = {
           desc = "Find Files";
-        };
-      };
-      "<leader>ff" = {
-        action = "file_browser";
-        options = {
-          desc = "File Browser";
         };
       };
       "<leader>f:" = {

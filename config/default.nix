@@ -89,11 +89,24 @@
     nvim-autopairs.enable = true;
     notify.enable = true;
 
-    yazi = {
+    mini = {
       enable = true;
+      modules = {
+        files = {
+          mappings = {
+            synchronize = "<leader><leader>";
+          };
+        };
+      };
     };
   };
   keymaps = [
+    {
+      mode = "n";
+      key = "<leader>ff";
+      options.desc = "Files";
+      action = "<cmd>lua MiniFiles.open()<CR>";
+    }
     {
       mode = "n";
       key = "<leader>a";
