@@ -22,7 +22,7 @@
 
     keymaps = {
       "<leader><leader>" = {
-        action = "file_browser";
+        action = "find_files";
         options = {
           desc = "Find Files";
         };
