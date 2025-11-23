@@ -22,7 +22,7 @@
 
     keymaps = {
       "<leader><leader>" = {
-        action = "find_files";
+        action = "file_browser";
         options = {
           desc = "Find Files";
         };
@@ -37,12 +37,6 @@
         action = "live_grep";
         options = {
           desc = "Grep";
-        };
-      };
-      "<leader>fg" = {
-        action = "git_files";
-        options = {
-          desc = "Search git files";
         };
       };
       "<leader>fd" = {
