@@ -54,6 +54,9 @@
 
     flash = {
       enable = true;
+      settings = {
+        modes.char.jump_labels = true;
+      };
     };
 
     harpoon = {
@@ -131,6 +134,24 @@
       mode = "n";
       key = "<leader>,";
       action.__raw = "function() require'harpoon':list():prev() end";
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "s";
+      action.__raw = "function() require('flash').jump() end";
+      options.desc = "Flash Jump";
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "S";
+      action.__raw = "function() require('flash').treesitter() end";
+      options.desc = "Flash Treesitter";
+    }
+    {
+      mode = "o";
+      key = "r";
+      action.__raw = "function() require('flash').remote() end";
+      options.desc = "Remote Flash";
     }
   ];
 }
