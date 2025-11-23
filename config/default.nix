@@ -51,6 +51,11 @@
 
   plugins = {
     lz-n.enable = true;
+
+    flash = {
+      enable = true;
+    };
+
     harpoon = {
       enable = true;
     };
