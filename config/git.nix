@@ -2,7 +2,11 @@
   plugins = {
     gitlinker = {
       enable = true;
-      printUrl = false;
+      settings = {
+        opts = {
+          print_url = false;
+        };
+      };
     };
 
     gitsigns = {
