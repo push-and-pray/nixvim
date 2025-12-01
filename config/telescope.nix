@@ -14,6 +14,7 @@
         enable = true;
         settings = {
           auto_depth = true;
+          hijack_netrw = true;
         };
       };
       ui-select.enable = true;

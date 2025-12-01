@@ -96,17 +96,6 @@
     which-key.enable = true;
     nvim-autopairs.enable = true;
     notify.enable = true;
-
-    mini = {
-      enable = true;
-      modules = {
-        files = {
-          mappings = {
-            synchronize = "<leader><leader>";
-          };
-        };
-      };
-    };
   };
   keymaps = [
     {
