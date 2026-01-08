@@ -96,6 +96,15 @@
       };
     };
 
+    indent-blankline = {
+      enable = true;
+      settings = {
+        scope.enabled = true;
+      };
+    };
+
+    nvim-surround.enable = true;
+
     treesitter-textobjects.enable = true;
     treesitter = {
       enable = true;
@@ -114,12 +123,6 @@
     notify.enable = true;
   };
   keymaps = [
-    {
-      mode = "n";
-      key = "<leader>ff";
-      options.desc = "Files";
-      action = "<cmd>lua MiniFiles.open()<CR>";
-    }
     {
       mode = "n";
       key = "<leader>a";
