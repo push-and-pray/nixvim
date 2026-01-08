@@ -61,6 +61,16 @@
 
     harpoon = {
       enable = true;
+      lazyLoad = {
+        settings = {
+          keys = [
+            "<leader>a"
+            "<C-e>"
+            "<leader>."
+            "<leader>,"
+          ];
+        };
+      };
     };
 
     toggleterm = {
@@ -107,6 +117,7 @@
 
     treesitter-textobjects.enable = true;
     treesitter = {
+      lazyLoad.settings.event = "BufRead";
       enable = true;
       settings = {
         indent.enable = true;
