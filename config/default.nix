@@ -78,7 +78,23 @@
       };
     };
 
-    lightline.enable = true;
+    lualine = {
+      enable = true;
+      settings = {
+        options = {
+          theme = "gruvbox";
+          globalstatus = true;
+        };
+      };
+    };
+
+    bufferline = {
+      enable = true;
+      settings.options = {
+        mode = "buffers";
+        diagnostics = "nvim_lsp";
+      };
+    };
 
     treesitter-textobjects.enable = true;
     treesitter = {
