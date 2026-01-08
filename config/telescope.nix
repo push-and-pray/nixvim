@@ -15,6 +15,19 @@
         settings = {
           auto_depth = true;
           hijack_netrw = true;
+          respect_gitignore = true;
+          mappings = {
+            "i" = {
+              "<C-g>" = {
+                __raw = "require('telescope').extensions.file_browser.actions.toggle_respect_gitignore";
+              };
+            };
+            "n" = {
+              "<C-g>" = {
+                __raw = "require('telescope').extensions.file_browser.actions.toggle_respect_gitignore";
+              };
+            };
+          };
         };
       };
       ui-select.enable = true;
