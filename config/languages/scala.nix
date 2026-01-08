@@ -5,6 +5,11 @@
   extraConfigLua = ''
     local metals = require("metals")
     local config = metals.bare_config()
+
+    config.settings = {
+      metalsBinaryPath = vim.fn.exepath("metals"),
+    }
+
     config.init_options.statusBarProvider = "off"
     config.capabilities = require("blink-cmp").get_lsp_capabilities(vim.lsp.protocol.make_client_capabilities())
     config.on_attach = function(client, bufnr)
