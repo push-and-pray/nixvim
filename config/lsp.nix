@@ -9,9 +9,11 @@
 
     conform-nvim = {
       enable = true;
-      settings.format_on_save = {
-        lspFallback = true;
-        timeoutMs = 500;
+      settings = {
+        format_on_save = {
+          lsp_fallback = true;
+          timeout_ms = 3000;
+        };
       };
     };
 
