@@ -29,6 +29,12 @@
   '';
 
   plugins = {
+    conform-nvim = {
+      settings.formatters_by_ft = {
+        scala = ["scalafmt"];
+        sbt = ["scalafmt"];
+      };
+    };
     dap = {
       enable = true;
       configurations = {
