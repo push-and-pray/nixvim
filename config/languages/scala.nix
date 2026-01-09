@@ -8,7 +8,6 @@
     vim.api.nvim_create_autocmd("FileType", {
       pattern = { "scala", "sbt", "java" },
       callback = function()
-        -- MOVE REQUIRES INSIDE THE CALLBACK
         local metals = require("metals")
         local config = metals.bare_config()
 
