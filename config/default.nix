@@ -61,16 +61,6 @@
 
     harpoon = {
       enable = true;
-      lazyLoad = {
-        settings = {
-          keys = [
-            "<leader>a"
-            "<C-e>"
-            "<leader>."
-            "<leader>,"
-          ];
-        };
-      };
     };
 
     toggleterm = {
