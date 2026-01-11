@@ -19,7 +19,7 @@
 
     tabstop = 2;
     softtabstop = 2;
-    showtabline = 2;
+    showtabline = 0;
     expandtab = true;
 
     smartindent = true;
@@ -85,14 +85,6 @@
           theme = "gruvbox";
           globalstatus = true;
         };
-      };
-    };
-
-    bufferline = {
-      enable = true;
-      settings.options = {
-        mode = "buffers";
-        diagnostics = "nvim_lsp";
       };
     };
 
