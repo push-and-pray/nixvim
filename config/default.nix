@@ -20,6 +20,7 @@
     tabstop = 2;
     softtabstop = 2;
     showtabline = 0;
+    cmdheight = 0;
     expandtab = true;
 
     smartindent = true;
