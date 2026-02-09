@@ -7,5 +7,6 @@
     ./k8s.nix
     ./zig.nix
     ./go.nix
+    ./java.nix
   ];
 }
