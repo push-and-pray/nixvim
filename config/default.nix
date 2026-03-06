@@ -89,6 +89,10 @@
       };
     };
 
+    overseer = {
+      enable = true;
+    };
+
     indent-blankline = {
       enable = true;
       settings = {
@@ -154,6 +158,22 @@
       key = "r";
       action.__raw = "function() require('flash').remote() end";
       options.desc = "Remote Flash";
+    }
+    {
+      mode = "n";
+      key = "<leader>tr";
+      action = "<cmd>OverseerRun<CR>";
+      options = {
+        desc = "Task: Run";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>tt";
+      action = "<cmd>OverseerToggle<CR>";
+      options = {
+        desc = "Task: Toggle UI";
+      };
     }
   ];
 }

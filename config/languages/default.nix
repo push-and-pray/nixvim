@@ -8,5 +8,6 @@
     ./zig.nix
     ./go.nix
     ./java.nix
+    ./c.nix
   ];
 }
