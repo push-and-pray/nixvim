@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  extraPackages = with pkgs; [isort ruff];
   plugins = {
     lsp = {
       enable = true;
