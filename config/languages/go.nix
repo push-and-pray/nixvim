@@ -16,8 +16,12 @@
 
     conform-nvim = {
       settings.formatters_by_ft = {
-        go = ["gofmt"];
+        go = ["golangci-lint"];
       };
+    };
+
+    lint.lintersByFt = {
+      go = ["golangcilint"];
     };
   };
 }
