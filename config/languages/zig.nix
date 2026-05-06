@@ -3,7 +3,15 @@
     lsp = {
       enable = true;
       servers = {
-        zls.enable = true;
+        zls = {
+          enable = true;
+          package = null;
+          settings = {
+            zls = {
+              enable_build_on_save = true;
+            };
+          };
+        };
       };
     };
 
