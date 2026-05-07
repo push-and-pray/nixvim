@@ -66,15 +66,5 @@
         ];
       };
     };
-
-    neotest = {
-      enable = true;
-      adapters = {
-        scala.enable = true;
-        scala.settings = {
-          framework = "scalatest";
-        };
-      };
-    };
   };
 }

@@ -5,11 +5,5 @@
       jdtLanguageServerPackage = null;
       settings.cmd = ["jdtls"];
     };
-    neotest = {
-      enable = true;
-      adapters = {
-        java.enable = true;
-      };
-    };
   };
 }

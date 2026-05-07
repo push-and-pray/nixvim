@@ -4,6 +4,7 @@
       enable = true;
       servers = {
         pyright.enable = true;
+        pyright.package = null;
       };
     };
 

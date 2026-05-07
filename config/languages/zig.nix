@@ -24,12 +24,5 @@
     lint.lintersByFt = {
       zig = ["zlint"];
     };
-
-    neotest = {
-      enable = true;
-      adapters = {
-        zig.enable = true;
-      };
-    };
   };
 }
